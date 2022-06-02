@@ -1,0 +1,50 @@
+#plant p {
+	position: absolute;
+	bottom: 14px;
+	width: 39%;
+	/* outline: 1px solid red; */
+	left: 24%;
+	margin: 0;
+	padding: 0;
+	background-color: transparent;
+	box-shadow: none;
+	color: black;
+	font-size: 1rem;
+	font-family: cursive;
+	text-align: center;
+
+
+}
+
+#plant {
+	position: relative;
+	height: 350px;
+	width: 350px;
+
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+
+	cursor: url(img/watering-can-cursor.png) 100 100, auto;
+}
+
+#plant.base {
+	background-image: url(img/flower-base.png);
+}
+#plant.bad1 {
+	background-image: url(img/flower-bad1.png);
+}
+#plant.bad2 {
+	background-image: url(img/flower-bad2.png);
+}
+#plant.bad3 {
+	background-image: url(img/flower-bad3.png);
+	cursor: not-allowed;
+}
+#plant.good1 {
+	background-image: url(img/flower-good1.png);
+}
+#plant.good2 {
+	background-image: url(img/flower-good2.png);
+	cursor: not-allowed;
+}

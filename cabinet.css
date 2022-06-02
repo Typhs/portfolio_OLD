@@ -1,0 +1,79 @@
+#cabinet-container{
+	--cabinet-height:650px;
+	--cabinet-width:650px;
+	height: var(--cabinet-height);
+}
+
+#cabinet-fg{
+	pointer-events: none; /*this allows the cursor to reach beneath this layer and target the 'files' */
+	position: relative;
+	width: var(--cabinet-width);
+	height: var(--cabinet-height);
+	background-image: url(img/cabinet-Foreground.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 10;
+	margin-top: calc(-1* var(--cabinet-height));
+}
+	
+#cabinet-bg{
+	position: relative;
+	width: var(--cabinet-width);
+	height: var(--cabinet-height);
+	background-image: url(img/cabinet-Background.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 3;
+}
+
+#cabinet-container .cabinet-file{
+	
+	position: relative;
+	width: calc(var(--cabinet-height) * 0.3);
+	height: calc(var(--cabinet-width) * 0.3);
+	background-image: url(img/cabinet-File.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	transition: 1s;
+	cursor: pointer;	
+}
+
+#cabinet-container .cabinet-file p{
+	color: black;
+	position: relative;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.3em;
+	text-align: center;
+	display: block;
+	width: 65%;
+	top: 50px;
+	margin: auto;
+	transform: rotate(8.5deg);
+}
+
+
+#cabinet-container .cabinet-file.n1{/*the following calculations are just a bunch of garbage I threw against the wall to see what sticks, It works but just barely*/
+	top: calc(-0.45* var(--cabinet-height));
+	left: calc(0.2* var(--cabinet-height));
+	z-index: 5;
+} 
+#cabinet-container .cabinet-file.n2{
+	top: calc(-0.45* var(--cabinet-height)  - (var(--cabinet-height)* 0.33) );
+	left: calc(0.25* var(--cabinet-height));
+	z-index: 4;
+} 
+#cabinet-container .cabinet-file.n3{
+	top: calc(-0.45* var(--cabinet-height)  - (var(--cabinet-height)* 0.66) );
+	left: calc(0.3* var(--cabinet-height));
+	z-index: 3;
+	
+} 
+
+#cabinet-container .cabinet-file:hover{
+	margin-top: calc(-0.20* var(--cabinet-height));
+	transition: 1s;
+}

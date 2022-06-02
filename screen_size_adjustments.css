@@ -1,0 +1,26 @@
+
+
+
+/* this is a neat trick for visualizing stuff */
+/* *{outline: 1px solid red !important;} */
+
+
+@media only screen and (max-width: 1070px) {
+	#container-banana{
+		margin: auto;
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	#plant-and-cabinet{
+		display: block;
+	}
+	#cabinet-container{
+		--cabinet-height:300px;
+		--cabinet-width:300px;
+	}
+	
+	/*==================*/
+	/*===-UNFINISHED-===*/
+	/*==================*/
+}

@@ -1,0 +1,114 @@
+
+#gameboy{
+    --border-color: rgb(23, 49, 23);
+
+    width: 400px;
+    margin: 40px auto;
+    outline: 2px solid black;
+    height: 650px;
+    border-radius: 10px;
+    background-color: rgb(52, 59, 70);
+    padding: 10px;
+
+    box-shadow: 0 20px 0 20px rgb(24, 24, 24);
+}
+
+#gameboy-reset{
+    margin: 0px 15px -10px auto;
+    padding: 5px;
+    background-color: rgb(68, 72, 80);
+    outline: 1px solid black;
+    border-radius: 5px;
+    box-shadow: -3px 3px 0 rgba(0, 0, 0, 0.5);
+    width: fit-content;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#game-board{
+    margin: 20px auto;
+    background-color: rgb(93, 129, 85);
+    width: 100vmin;
+    height: 100vmin;
+
+    display:grid;
+    grid-template-columns: repeat(25, 1fr);
+    grid-template-rows: repeat(25,1fr);
+
+    width: 370px;
+    height: 370px;
+    border-radius: 5px;
+    outline: 4px solid black;   
+}
+
+#gameboy-controls{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+}
+
+#gameboy-up{
+    width: 65px;
+    height: 65px;
+    outline: 5px solid black;
+    border-radius: 5px;
+    background-color: red;
+    margin: 0 auto;
+    background-image: url(img/arrow.png);
+    background-size: contain;
+    background-position: center;
+    transform: rotate(270deg);
+    cursor: pointer;
+    
+}
+#gameboy-left{
+    width: 65px;
+    height: 65px;
+    
+    background-color: yellow;
+    margin: auto;
+    background-image: url(img/arrow.png);
+    background-size: contain;
+    background-position: center;
+    transform: rotate(180deg);
+    outline: 5px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}   
+#gameboy-right{
+    width: 65px;
+    height: 65px;
+    outline: 5px solid black;
+    border-radius: 5px;
+    background-color: blue;
+    margin: auto;
+    background-image: url(img/arrow.png);
+    background-size: contain;
+    background-position: center;
+    transform: rotate(0);
+    cursor: pointer;
+}
+#gameboy-down{
+    width: 65px;
+    height: 65px;
+    outline: 5px solid black;
+    border-radius: 5px;
+    background-color: green;
+    margin: 0 auto;
+    background-image: url(img/arrow.png);
+    background-size: contain;
+    background-position: center;
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+
+#game-board div {
+    border: 3px solid var(--border-color);
+    border-collapse: collapse;
+}
+
+#game-board .snake{
+    background-color: var(--border-color);
+    outline: 2px solid rgb(93, 129, 85);
+}

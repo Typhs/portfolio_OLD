@@ -1,0 +1,29 @@
+
+#container-banana{
+  margin: -10em 0 0 auto;
+}
+
+#banana{
+  background-image: url(img/banana1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 550px;
+  width: 450px;
+}
+
+  #banana.banana1{
+    background-image: url(img/banana1.png);
+  }
+  #banana.banana2{
+    background-image: url(img/banana2.png);
+  }
+  #banana.banana3{
+    background-image: url(img/banana3.png);
+  }
+  #banana.banana4{
+    background-image: url(img/banana4.png);
+  }
+  #banana.banana5{
+    background-image: url(img/banana5.png);
+  }

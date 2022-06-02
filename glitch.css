@@ -1,0 +1,264 @@
+
+
+#matrix-canvas{
+	position: relative;
+	background-color: black;
+	height: 1000px;
+	width: 110vw;
+	margin: 0;
+	margin-top: -100%;
+	margin-left: -10%;
+	left: 0;
+	overflow: hidden;
+	/* position: absolute; */
+	z-index: 2;
+}
+
+
+
+#construction-site{
+	width: 110vw;
+	/* height: 200px; */
+	margin-left: -10%;
+	background: rgb(7,7,10);
+	background: linear-gradient(0deg, rgba(7,7,10,1) 0%, rgba(45,38,66,0) 100%);
+}
+
+#construction-crane{
+	background-image: url(img/glitch-construction-crane.png);
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 700px;
+	width: 90vw;
+	margin: 100px auto 0  auto;
+	padding-bottom: 100px;
+}
+
+.construction-sign{
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	text-decoration: underline;
+	color: black;
+	font-size: 2rem;
+	text-align: center;
+	width: 300px;
+	height: 300px;
+	margin: 0 auto -300px auto;
+	background-image: url(img/glitch-construction-sign.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: relative;
+	z-index: 4;
+}
+.construction-sign span{
+	display: block;
+	padding-top: 90px;
+}
+
+
+.yellow-tape{
+	font-family: 'Courier New', Courier, monospace;
+	font-weight: bolder;
+	text-align: center;
+	font-size: 1.1em;
+	width: 120vw;
+	margin-left: -10vw;
+	background-color: rgb(207, 207, 40);
+	color: black;
+	padding: 10px;
+	border-top: 5px solid black;
+	border-bottom: 5px solid black;
+	background-image: url(img/tape-stripe.png);
+	background-size: contain;
+}
+
+.yellow-tape span{
+	display: inline-block;
+	background-color: rgb(207, 207, 40);
+	padding: 2px;
+	outline: 1px solid black;
+	border-radius: 2px;
+}
+
+
+.glitch-before{
+	width: 110vw;
+	height: 200px;
+	margin-left: -10%;
+	/* margin-bottom: -5%; */
+	background: rgb(7,7,10);
+background: linear-gradient(0deg, rgba(7,7,10,1) 0%, rgba(45,38,66,0) 100%);
+}
+
+.glitch-transition{
+	width: 110vw;
+	height: 200px;
+	background-image: url(img/glitchy-pattern.png);
+	background-size: contain;
+	margin-left: -10%;
+	margin-bottom: -13%;
+	position: relative;
+	z-index: 4;
+	transform: rotate(180deg);
+
+}
+
+
+.glitch-align{
+	transform: rotate(181deg);
+	transition: 2s;
+}
+
+
+
+.glitch-cat-1{
+	background-image: url(https://api.time.com/wp-content/uploads/2019/03/kitten-report.jpg);
+	background-size: contain;
+}
+.glitch-cat-2{
+	background-image: url(https://www.worldanimalprotection.org.br/sites/default/files/media/aylin-cobanoglu-jfb25KQSf-M-unsplash.jpg);
+	background-size: contain;
+}
+.glitch-cat-3{
+	background-image: url(https://i.pinimg.com/474x/67/d0/f1/67d0f123d24f8188251d8f126c7104b0.jpg);
+	background-size: contain;
+}
+
+
+#glitch-container{
+	position: relative;
+	width: 750px;
+	height: 1000px;
+	background-image: url(img/glitch-power-box.png);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: 3;
+	margin: 0 auto;
+	
+}
+
+
+#glitch-note{
+	margin: -300px 50px 150px auto;
+	height: 150px;
+	width: 150px;
+	background-image: url(img/glitch-post-it.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	
+}
+
+#glitch-note span{
+	text-decoration: underline;
+	color: black;
+	font-size: 2rem;
+	padding-top: 50px;
+	text-align: center;
+	display: block;
+	transform: rotate(-5deg);
+}
+
+#glitch-box{
+	display: inline-block;
+	margin: 56% auto auto 18%;
+	width: 320px;
+	height: 514px;
+	
+}
+
+#glitch-box .flex{
+	display: flex;
+	flex-wrap: wrap;
+	height: 100%;
+	width: 100%;
+}
+
+#glitch-box .glitch-button{
+	margin: 32% auto 5px auto;
+	width: 30%;
+	height: 20%;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+/* Off Buttons: */
+#glitch-box .glitch-button.b1{
+	background-image: url(img/glitch-button-eye-off.png);
+}
+#glitch-box .glitch-button.b2{
+	background-image: url(img/glitch-button-align-off.png);
+}
+#glitch-box .glitch-button.b3{
+	background-image: url(img/glitch-button-cat-off.png);
+}
+/* ON Buttons: */
+#glitch-box .glitch-button.b1.on{
+	background-image: url(img/glitch-button-eye-on.gif);
+}
+#glitch-box .glitch-button.b2.on{
+	background-image: url(img/glitch-button-align-on.gif);
+}
+#glitch-box .glitch-button.b3.on{
+	background-image: url(img/glitch-button-cat-on.gif);
+}
+
+
+#glitch-server-status{
+	margin: 10px auto;
+	text-align: center;
+	width: fit-content;
+	padding: 0 1em;
+
+	background-color: rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	outline: 1px solid rgba(0, 0, 0, 0.5);
+}
+#glitch-server-status span{
+	font-weight: bolder;
+	display: inline-block;
+	margin: 5px auto;
+	padding: 5px 1em;
+	border-radius: 5px;
+	width: fit-content;
+	background-color: green;
+	outline: 1px solid rgba(0, 0, 0, 0.5);
+}
+#glitch-server-status.off span{
+	background-color: red;
+}
+
+/* POWER BUTTON: */
+
+/* #glitch-box .glitch-power-container *{outline: 1px solid red;} */
+
+#glitch-box .glitch-power-container{
+	width: 100%;
+	height: fit-content;
+	display: flex;
+	outline: 1px solid black;
+	margin: 0 10px;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+#glitch-power-button{
+	height: 200px;
+	width: 45%;
+	background-image: url(img/glitch-power-button-closed.png);
+	background-position: center;
+	background-size: contain;	
+	background-repeat: no-repeat;
+	margin: auto;
+	cursor: not-allowed;
+}
+
+#glitch-power-button.opened{
+	background-image: url(img/glitch-power-button-opened.png);
+	cursor: pointer;
+}

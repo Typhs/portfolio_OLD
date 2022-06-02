@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <title>Portfolio</title>
+
+        <link rel="stylesheet" href="styles.css">
+
+        <script src="script.js" defer></script>
+
+
+        <link rel="stylesheet" href="banana.css"> 
+
+        <link rel="stylesheet" href="snake.css">
+
+        <link rel="stylesheet" href="plant.css">
+        <script src="plant.js" defer></script>
+
+        <link rel="stylesheet" href="cabinet.css">
+        <script src="cabinet.js" defer></script>
+
+        <script type="module" src="snake_code/ctrl_snake.js"></script>
+
+        <link rel="stylesheet" href="glitch.css">
+        <script src="matrix.js" defer></script>
+        
+        <script src="glitch.js" defer></script>
+
+        <link rel="stylesheet" href="numlock.css">
+        
+        <link rel="stylesheet" href="screen_size_adjustments.css">
+    </head>
+    <!-- =================================================================== -->
+    <body>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>$.ajax({
+            type: "POST",
+            url: "get-time.php",
+            success: function(data) {
+                const x = (new Date() - new Date(data));
+		        if (x < 5*60000){
+                    //relocates if time.txt was set less than 5min ago
+                    window.location.replace("/404.html");
+                }
+            }
+        });</script>
+    
+        <div class="parallax"> <!--parallaxing pannel:      -->
+            
+            <div class="parallax_layer parallax_layer_0">
+                <img
+                    src="img/Urban-Night-0.png" alt="painel de parallaxing"/>
+            </div>
+            <div class="parallax_layer parallax_layer_1">
+                <img
+                    src="img/Urban-Night-1.gif" alt="painel de parallaxing"/>
+            </div>
+            <div class="parallax_layer parallax_layer_2">
+                <img
+                    src="img/Urban-Night-2.png" alt="painel de parallaxing"/>
+            </div>
+            <div class="parallax_layer parallax_layer_3">
+                <img
+                    src="img/Urban-Night-3.gif" alt="painel de parallaxing"/>
+            </div>
+            <div class="parallax_layer parallax_layer_4">
+                <img
+                    src="img/Urban-Night-4.gif" alt="painel de parallaxing"/>
+            </div>
+            <div class="parallax_layer parallax_layer_5">
+                <img
+                    src="img/Urban-Night-5.gif" alt="painel de parallaxing"/>
+            </div>
+    
+          <br><br>
+            <div class="parallax_after">
+    
+                <br>
+                <h1>
+                    <span class="typewrite" data-period="2000" data-type='[ "Olá!", "Eu sou Tailan :)", "E eu amo Programação"]'></span>
+                    <!-- <span class="wrap"></span> -->
+                </h1>
+
+                <main>
+                    <h2 class="slide-in left">Introdução</h2>
+                    <br>
+                    <div class="boxed"><p>Olá, eu sou <span class="highlight"> Tailan</span>, e esse é o meu portfolio!</p> </div>
+                    <div class="boxed">
+                        <p>
+                        Esse site é uma <span class="highlight">exibição das minhas habilidades e competências em desenvolvimento web</span>, do que eu sou capaz de produzir e com qual nível de fidelidade, estruturação e confiabilidade. <br><br>
+
+                        Tudo aqui amostrado - as imagens, animações, layouts, textos e tudo mais - é <span class="highlight"> totalmente orginal</span> feito por mim. <br><br>
+
+                        Nesse projeto foi utilizado:
+                        
+                            <ul>
+                                <li>521 linhas de <span class="highlight">HTML</span></li>
+                                <li>849 linhas de <span class="highlight">CSS</span></li>
+                                <li>567 linhas de <span class="highlight">Javascript</span> (+ jQuery)</li>
+                                <li>13 linhas <span class="highlight">PHP</span></li>
+                            </ul>
+                            <br>
+                            <p>O resto da receita você encontra <a href="https://github.com/Typhs/portfolio" title="repositorio do Github" target="_blank">aqui</a>.</p>
+                        <br><br>
+                        
+                        <p>Tudo aqui foi desenvolvido dentro de <span class="highlight">5 dias</span>, somando-se em torno de <span class="highlight">35 horas de trabalho</span> (menos o painel de parallaxing acima, esse eu fiz uns meses atrás).</p>      
+                        
+                        </div>
+                    <br>
+
+
+                    <h2 class="slide-in right">Sobre o Autor</h2>
+                    <br>
+                    <div class="boxed right">
+                        <p>Meu nome é <span class="highlight">Tailan</span>. Entre outras coisas eu sou um programador, desenhista, estudante, ...mamífero?</p>
+                    </div>
+                    <div class="boxed right">
+                        <p><span class="highlight">Contato: </span></p><br>
+                        <div class="left">
+                            <ul>
+                                <li>bmtailan@gmail.com</li>
+                                <li><a href="https://github.com/typhs" target="blank" title="conta do github">github.com/typhs</a> </li>
+                                <li>(42) 99152-0362</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                                    
+                    <hr>
+                    <h2 class="slide-in left">Um Tour do lugar</h2>
+                    <br>
+                    
+                    <div class="boxed">
+                        <p>Pode ir entrando, fica a vontade. <br>Tem <span class="highlight"> tanta coisa que eu quero te mostrar</span>!</p>
+                    </div>
+                    <div class="boxed">
+                        <p>Hmmm... eu adoraria poder te oferecer alguma coisa pra comer mas... hmm...</p>
+                    </div>
+                    <div class="boxed">
+                        <p>Um segundo...vejamos...</p>
+                    </div>
+                    <div class="boxed">
+                        <p>É, foi mal, a única coisa que eu achei na geladeira foi essa <span class="highlight">banana</span></p>
+                    </div>
+                    
+                    <div class="animation-container" id="container-banana">
+                        <div id="banana"></div>
+                    </div>
+
+                    <div class="boxed">
+                        <p>Hm, ok isso foi... rápido</p>
+                    </div>
+
+                    <hr>
+
+                    <br>
+                    <h2 class="slide-in right">Alguns Projetos</h2>
+                    <br>
+                    <div class="boxed right">
+                        <p>Há varios projetos, protótipos, e programas meus no geral que eu gostaria que você desse uma olhada.</p>
+                    </div>
+                    <div class="boxed right">
+                        <p>Vejamos... onde está aquele... hm, eu jurava que tinha deixado algum lugar por aqui...</p>
+                    </div>
+                    <div class="boxed right">
+                        <p>Ahá! <span class="highlight">olha só o que eu achei</span>:</p>
+                    </div>
+                    <div id="gameboy">
+                        
+                        <div id="gameboy-reset">reset</div>
+                        <div id="game-board"></div>
+                        <div id="gameboy-controls">
+                            <div style="width: 100%;"><div id="gameboy-up"></div></div>
+                            <div style="width: 100%; display: flex; flex-wrap: wrap;">
+                                <div id="gameboy-left"></div>
+                                <div id="gameboy-right"></div>
+                            </div>
+                            <div style="width: 100%;">
+
+                            <div id="gameboy-down"></div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="boxed right">
+                        <p>Ah... Já são <span id="time_now" class="highlight"></span>?!</p> 
+                    </div>
+
+                    <div class="boxed right">
+                        <p>Hmm, isso vai ser um problema...</p><br>
+                        <p>Ok, eu vou ter que sair pra fazer umas coisas, algum lugar por aqui tem um <span class="highlight">gabinete de projetos</span> meus, tenta dar uma olhada...</p>
+                        
+                    </div>
+                    <div class="boxed right"><p> já volto.</p></div>
+
+                    <br>                    
+                    
+
+                    <div id="plant-and-cabinet">
+                        <div class="animation-container">
+                            <div id="plant" class="base">
+                                <p>favor regar a planta enquanto estou fora :)</p>
+                            </div>
+                        </div>
+
+                        <div class="animation-container">
+                            <div id="cabinet-container">
+                                <div id="cabinet-bg"></div>
+                                
+                                <div id="cabinet-fg"></div>
+                                <div class="cabinet-file n1" title="Github: meu discord Bot" data-url="https://github.com/Typhs/Discord-Music-Bot"><p>Meu Discord Music Bot</p> </div>
+                                <div class="cabinet-file n2" title="Github: codigo para transcrever numeros por extenso" data-url="https://github.com/Typhs/Numeros-Por-Extenso"><p>Números por extenso</p> </div>
+                                <div class="cabinet-file n3" title="Github: outros projetos" data-url="https://github.com/typhs"><p>mais <br>...</p> </div>
+                                
+                            </div>
+                        </div>
+                     </div>
+
+                     <br>
+                     <hr>
+
+                     <br><br>
+                    <h2 class="slide-in left" >Está tudo bem...</h2>
+                     <br>
+                    <div class="boxed">
+                        <p>Ok, voltei.</p>
+                    </div>
+                    <div class="boxed">
+                        <p>Desculpe o impesilho, meu cachorro pegou fogo.</p>
+                    </div>
+                    <div class="boxed">
+                        <p>Onde estávamos?</p><br>
+                        <p>Ah sim, vamos lá. Ainda temos muito mais o que ver!</p>
+                    </div>
+                    <br><br>
+                    <div class="boxed">
+                        <p>Ou... não?</p>
+                    </div>
+                    <div class="boxed">
+                        <p>Mas que coisa...</p>
+                    </div>
+
+
+                    <div id="construction-site">
+                        <br><br><br><br>
+                        <div class="construction-sign"><span>EM <br> CONSTRUÇÃO</span></div>    
+                        <div class="yellow-tape" style="transform: rotate(5deg);"><span style="margin-left: 10em;">ACESSO RESTRITO</span><span style="margin-left:25em ;">ACESSO RESTRITO</span></div>
+                        <br>
+                        <br>
+                        <div class="yellow-tape" style="transform: rotate(10deg);"><span>ACESSO RESTRITO</span></div>
+                        <br><br>
+                        <div class="yellow-tape" style="transform: rotate(-3deg);"><span style="margin-right:30em;">ACESSO RESTRITO</span> <span>ACESSO RESTRITO</span></div>
+
+                        <div id="construction-crane"></div>
+                    </div>
+
+                    <!-- <div class="glitch-before"></div> -->
+                    <div class="glitch-transition"></div>
+                    
+                    <div id="glitch-container">
+                        <div id="glitch-box">
+                            
+                        <div id="glitch-note"><span>...</span></div>
+                            <div class="flex">
+
+                                <div class="glitch-button b1"></div>
+                                <div class="glitch-button b2"></div>
+                                <div class="glitch-button b3"></div>
+
+                                
+                                <div class="glitch-power-container">
+                                    <div id="glitch-power-button" title="---desligar servidor---"></div>
+                                    <div id="num-lock">
+                                        <div class="display"><span id="num-lock-display"></span></div>
+                                        <div class="number"><span>1</span></div>
+                                        <div class="number"><span>2</span></div>
+                                        <div class="number"><span>3</span></div>
+                                        <div class="number"><span>4</span></div>
+                                        <div class="number"><span>5</span></div>
+                                        <div class="number"><span>6</span></div>
+                                        <div class="number"><span>7</span></div>
+                                        <div class="number"><span>8</span></div>
+                                        <div class="number"><span>9</span></div>
+                                        <div class="number"><span>0</span></div>
+                                        <div class="enter" id="num-lock-enter"><span>ENTER</span></div>
+                                    </div>
+                                </div>
+                                <div id="glitch-server-status" class="on">Status do servidor: <span> LIGADO </span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="matrix-container">
+                        <canvas width="500" height="200" id="matrix-canvas"></canvas>
+                    </div>
+                
+
+                    
+                </main>
+    
+    
+            </div>
+        </div> <!-- END OF PARALLAX TAG -->
+
+
+        <!-- PRELOADS: -->
+<!--  i have no idea how to make this work ;-;
+
+        <link rel="preload" href="img/banana1.png" as="image">
+        <link rel="preload" href="img/banana2.png" as="image">
+        <link rel="preload" href="img/banana3.png" as="image">
+        <link rel="preload" href="img/banana4.png" as="image">
+        <link rel="preload" href="img/banana5.png" as="image">
+
+        <link rel="preload" href="img/flower-base.png" as="image">
+        <link rel="preload" href="img/flower-bad1.png" as="image">
+        <link rel="preload" href="img/flower-bad2.png" as="image">
+        <link rel="preload" href="img/flower-bad3.png" as="image">
+        <link rel="preload" href="img/flower-good1.png" as="image">
+        <link rel="preload" href="img/flower-good2.png" as="image">
+        <link rel="preload" href="img/watering-can-cursor.png" as="image">
+-->
+    </body>
+    
+    
+</html>

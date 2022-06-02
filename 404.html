@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>404 - Não Encontrado</title>
+
+
+    <style>
+        html {
+            background-color: black;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            max-width: 1400px;
+            margin: auto;
+        }
+
+        ::selection {
+            background-color: rgb(197, 128, 0);
+        }
+
+        #img-bg {
+            margin: 30px 10vw 0 10vw;
+            background-image: url(img/404_not_found_-_wall.png);
+            background-repeat: repeat-x;
+            background-size: contain;
+            background-position: center;
+        }
+
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        #img-404 {
+            display: block;
+            height: 40vw;
+            width: 100%;
+            background-image: url(img/404_not_found\ -\ center\ -\ stripped-pt.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            animation: fadein 3s;
+        }
+
+        .after-banner {
+            margin-top: -10px;
+            font-size: 2rem;
+        }
+
+        .advice {
+
+            padding: 5px 20px 20px 20px;
+            max-width: 700px;
+            margin: auto;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, .1);
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        li.br {
+            display: block;
+            height: 3em;
+        }
+
+        li.hr {
+            display: block;
+            border: 1px solid white;
+            width: 40%;
+            margin: 1em auto;
+        }
+
+        #timer {
+            font-weight: bolder;
+            background-color: rgb(36, 36, 36);
+            padding: 5px 15px;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<!-- ================================================================ -->
+
+<body onload='startTime()'>
+
+    <div class="background">
+        <div id="img-bg">
+            <a id="img-404" href="/index.html" title="home"></a>
+        </div>
+    </div>
+
+    <div class="after-banner">
+        <p>esta página não parece estar disponível no momento...</p>
+    </div>
+
+    <div class="advice">
+        <h2>O que fazer?</h2>
+        <ul>
+            <li>Verificar a fidelidade do endereço de URL.</li>
+
+            <li class="hr"></li>
+            <!--html doesn't allow for 'hr' or 'br' inside lists, so we diy this shit-->
+
+            <li>Verifique-se de que o seu dispostivo está conectado a uma fonte de endergia.</li>
+
+            <li class="hr"></li>
+
+            <li>Verifique os seus arredores por sinais de incêndio, intrusão, ou aquele cara esquisito que bateu na sua
+                porta uma vez.</li>
+
+            <li class="hr"></li>
+
+            <li class="br"></li>
+
+            <li>Se nenhum dos itens anteriores se provou útil na sua situação, é recomendado entrar em pânico - mas só
+                um pouquinho.</li>
+        </ul>
+
+    </div>
+    <br><br><br><br>
+    <div id="timer-container">
+        <p>Servidor reiniciando em:</p>
+        <span id="timer">00:00</span>
+    </div>
+    <br>
+
+
+    <!-- ====================== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        var t;
+        $.ajax({
+            type: "POST",
+            url: "get-time.php",
+            success: function (data) {
+                t = data;
+            }
+        });
+        console.log(">", t);
+
+        let passed = 0;
+        function startTime() {
+            // console.log("tic")
+
+            //const today = new Date( new Date - t);
+            const today = new Date((new Date() - new Date(t) - (5 * 60000)) * -1);
+            let h = today.getHours() - 21;
+            let m = today.getMinutes();
+            let s = today.getSeconds();
+
+            if (h < 0) {
+                console.log(" h < 0");
+                document.getElementById('timer').innerHTML = '00' + ":" + '00' + ":" + '00';
+            } else {
+                h = checkTime(h);
+                m = checkTime(m);
+                s = checkTime(s);
+                document.getElementById('timer').innerHTML = h + ":" + m + ":" + s;
+            }
+
+
+            if (passed > 2 && h < 0) { //this is so that it only takes you to the home page if you were waiting for the timer
+                console.log("TIMER OUT");
+                window.location.replace("/index.html");
+            } else if (h < 0) {
+                return;
+            }
+
+            passed++;
+            setTimeout(startTime, 1000);
+        }
+
+        function checkTime(i) {
+            if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+            return i;
+        }
+    </script>
+</body>
+
+
+</html>

@@ -1,0 +1,225 @@
+:root{
+	/* VARIABLES: */
+	--bg-color: rgb(29, 31, 53);
+	--font-color: white;
+	--second-bg-color: rgba(255, 255, 255, 0.3);
+	--headings-bg-color: #ffb923;
+
+}
+
+::selection{
+	color: black;
+	background-color: rgb(114, 98, 255);
+}
+
+body, html{
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	color: var(--font-color);
+	
+}	
+
+h1{
+	text-align: center;
+	text-decoration: none;
+	font-size: 2rem; 
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin: -70vh 0 70vh 0; /*this takes the tag up to the middle-ish of the screen */
+} 
+h1 span{
+	background-color: var(--headings-bg-color);
+	color: black;
+	display: inline;
+	padding: 0.15em 1em 0.25em 1em;/*this makes the text more neatly centered vertically*/
+	margin: auto;
+	width: fit-content;
+	min-width: 10px;
+	min-height: 1em;
+	box-shadow: 8px 8px 0px 1px rgba(0, 0, 0, 0.5);
+}
+h1 .wrap{
+	box-shadow: none;
+}
+
+/* PARALLAX STUFF: ------------- */
+.parallax {
+	perspective: 20px;
+	overflow-x: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	
+	background-color: var(--bg-color);
+
+	/* filter: sepia(); */
+	/* filter: brightness(3); */
+	/* filter: contrast(3); */
+	
+}
+.parallax_layer {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	object-fit: contain;
+	margin: 0 auto;
+  
+}
+.parallax_layer img {
+	border-top: 4em solid var(--bg-color);
+	outline: 10px solid var(--bg-color);/*'position: absolute' makes it so that the imgs dont align perfectly with each other leaving some odd seams, this is to regulate that*/
+
+	margin: 0 auto;
+	width: auto;
+	height: 100vh;
+	display: block;
+	object-position: center;
+	position: relative;
+	image-rendering: pixelated;/*for imgs of structures in general as things with well defined corners, pixelated is usually better*/
+}
+	.parallax_layer_0 {
+	transform: translateZ(-120px) scale(7);
+	}
+	.parallax_layer_1 {
+	transform: translateZ(-120px) scale(7);
+	}
+	.parallax_layer_2 {
+	transform: translateZ(-80px) scale(5);
+	}
+	.parallax_layer_3 {
+	transform: translateZ(-40px) scale(3);
+	}
+	.parallax_layer_4 {
+	transform: translateZ(-20px) scale(2);
+	}
+	.parallax_layer_5 {
+	transform: translateZ(-10px) scale(1.5);
+	}
+
+.parallax_after {
+	background-color: var(--bg-color);
+	display: block;
+	position: relative;
+	margin-top: -10vh;
+	top: 100vh;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	min-height: 100vh;
+	z-index: 2;
+	background-image: url(img/repeatable-hexagon-pattern.png);
+	/* border-top: 10px solid var(--bg-color)	; */
+	box-shadow: inset 0 150px 100px -100px var(--bg-color); /*blends the start of the background pattern*/
+}
+/* END OF PARALLAX STUFF: ------- */
+
+/* Sliding animation stuff: --- */
+.slide-in{
+	transition: 1s;
+	visibility: hidden;
+}
+.slide-in.left{
+	text-align: left;
+	margin:0 auto 0-100%;
+}
+.slide-in.right{
+	text-align: right;
+	margin: 0 -100% 0 auto;
+}
+.slide-in.on-screen.left{
+	margin-left:1rem;
+	visibility: visible;
+}
+.slide-in.on-screen.right{
+	margin-right:1rem;
+	visibility: visible;
+}
+/* end of sliding animation---- */
+
+.right{ /*exclusivelly for alocating tags to the right*/
+	margin-right: 0;
+	text-align: right;
+}
+.left{ /*exclusivelly for alocating tags to the left*/
+	margin-left: 0;
+	text-align: left;
+}
+
+div.animation-container{
+	width: fit-content;
+	background-color: #17192a;
+	border-radius: 100%;
+	box-shadow: 0 0 5px  black;
+}
+
+main{
+	max-width: 1200px;
+	margin: auto;
+}
+
+
+h2{
+	min-width: 10em;
+	width: fit-content;
+	font-family:  Verdana, Geneva, Tahoma, sans-serif;	
+	display: block;
+	background-color: var(--headings-bg-color);
+	color: black;
+	padding: 4px 0.5em;
+	box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.5);
+}
+
+div.boxed{
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	letter-spacing: 1px;
+	max-width: 800px;
+	width: fit-content;
+	background-color: #34364a;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	font-size: 1.15rem;
+	margin: 0 1rem 1rem 1.5rem;
+	box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.5);
+	text-align: justify;
+}
+div.boxed.right{
+	margin: 0 1.5rem 1rem auto;
+}
+p , ul{
+	margin: 0;
+}
+
+span.highlight{
+	color: var(--headings-bg-color);
+}
+a {
+	color: rgb(229, 255, 0);
+}
+a::after{
+	color: rgb(229, 255, 0.5);
+}
+
+hr{
+	width: 60%;
+	margin: 3em auto;
+	border: 2px solid #34364a;
+	border-radius: 3px;
+}
+
+#plant-and-cabinet{
+	position: relative;
+	display: flex;
+}
+
+#plant-and-cabinet > *{
+	height: fit-content;
+	margin: auto auto 0 auto;
+}
