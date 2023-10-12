@@ -108,8 +108,26 @@ $("#glitch-power-button").click(function () {
 	$("#glitch-server-status").removeClass();
 	$("#glitch-server-status").addClass("off");
 
-  localStorage.setItem('time', new Date().toString())
-  window.location.replace("/404.html");
+
+  function glitchMoveRandom(){
+    $('.parallax_after *').each((idx, el)=>{
+      el = $(el)
+      el.css("transition" , "transform 4s linear, filter 1.5s linear")
+      const maxDistance = 100
+      const rY = Math.floor(Math.random() * (maxDistance - (-maxDistance) + 1) -maxDistance)
+      const rX = Math.floor(Math.random() * (maxDistance - (-maxDistance) + 1) -maxDistance)
+      el.css('transform', `translate(${rX}px, ${rY}px)`)
+      
+      el.css('filter', 'brightness(1)')
+      el.css('filter', 'brightness(0)')
+    })
+  }
+
+  glitchMoveRandom()
+  setTimeout(() => {
+    localStorage.setItem('time', new Date().toString())
+    window.location.replace("/404.html");
+  }, 3000);
 	// $.ajax({
 	//   url: 'set-time.php',
 	//   type: 'post',
