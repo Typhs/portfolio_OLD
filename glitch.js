@@ -107,14 +107,17 @@ $("#glitch-power-button").click(function () {
 	$("#glitch-server-status span").text("DESLIGADO");
 	$("#glitch-server-status").removeClass();
 	$("#glitch-server-status").addClass("off");
-	$.ajax({
-	  url: 'set-time.php',
-	  type: 'post',
-	  data: {"datatime":today}
-	})
-  .then(()=>{
-    location.reload(true);//full reaload of page
-  })
+
+  localStorage.setItem('time', new Date().toString())
+  window.location.replace("/404.html");
+	// $.ajax({
+	//   url: 'set-time.php',
+	//   type: 'post',
+	//   data: {"datatime":today}
+	// })
+  // .then(()=>{
+  //   location.reload(true);//full reaload of page
+  // })
   
   //console.log(t);
   //t = new Date(t);

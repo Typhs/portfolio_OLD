@@ -34,17 +34,24 @@
     <body>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script>$.ajax({
-            type: "POST",
-            url: "get-time.php",
-            success: function(data) {
-                const x = (new Date() - new Date(data));
-		        if (x < 5*60000){
-                    //relocates if time.txt was set less than 5min ago
-                    window.location.replace("/404.html");
-                }
-            }
-        });</script>
+        <script>
+        // $.ajax({
+        //     type: "POST",
+        //     url: "get-time.php",
+        //     success: function(data) {
+        //         const x = (new Date() - new Date(data));
+		    //     if (x < 5*60000){
+        //             //relocates if time.txt was set less than 5min ago
+        //             window.location.replace("/404.html");
+        //         }
+        //     }
+        // });
+        let t = localStorage.getItem('time')
+        if (t && (new Date() - new Date(t)) < 5*60000 ){
+          // relocates if time was set less than 5min ago
+          window.location.replace("/404.html");
+        }
+        </script>
     
         <div class="parallax"> <!--parallaxing pannel:      -->
             

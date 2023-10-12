@@ -141,13 +141,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         var t;
-        $.ajax({
-            type: "POST",
-            url: "get-time.php",
-            success: function (data) {
-                t = data;
-            }
-        });
+        // $.ajax({
+        //     type: "POST",
+        //     url: "get-time.php",
+        //     success: function (data) {
+        //         t = data;
+        //     }
+        // });
+        t = localStorage.getItem('time')
         console.log(">", t);
 
         let passed = 0;
