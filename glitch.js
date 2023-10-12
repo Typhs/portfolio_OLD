@@ -111,9 +111,10 @@ $("#glitch-power-button").click(function () {
 	  url: 'set-time.php',
 	  type: 'post',
 	  data: {"datatime":today}
-	});
-	
-	location.reload(true);//full reaload of page
+	})
+  .then(()=>{
+    location.reload(true);//full reaload of page
+  })
   
   //console.log(t);
   //t = new Date(t);

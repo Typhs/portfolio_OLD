@@ -118,6 +118,8 @@ h1 .wrap{
 	background-image: url(img/repeatable-hexagon-pattern.png);
 	/* border-top: 10px solid var(--bg-color)	; */
 	box-shadow: inset 0 150px 100px -100px var(--bg-color); /*blends the start of the background pattern*/
+  max-width: 1540px;
+  margin: auto;
 }
 /* END OF PARALLAX STUFF: ------- */
 
